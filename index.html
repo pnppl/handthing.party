@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html onload="handthing();" onclick="youstilldoingthat();">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="no-referrer">
+		<link rel="icon" href="">
+		<title>HAND THING</title>
+		<script>
+		function handthing() {
+			document.querySelector('video').muted = false;
+			document.querySelector('video').play();
+		}
+		function youstilldoingthat() {
+			handthing();
+			document.querySelector('#clickjack').style.display = "none";
+		}
+		</script>
+		<style>
+		body,
+		html {
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			background-image: url("hand.gif");
+		}
+		#clickjack {
+			height: 100vh;
+			width: 100%;
+			position: absolute;
+			z-index: 10;
+		}
+		video,
+		object,
+		embed {
+			padding-top: 1em;
+		}
+		a {
+			font-family: serif;
+			font-size: 2em;
+			color: red;
+		}
+		span {
+			display: block;
+			position: relative;
+			z-index: 1;
+		}
+		img.doll {
+			position: relative;
+			top: -3.5em;
+		}
+		img.ants {
+			position: absolute;
+			top: 0;
+		}
+		img.ants.left {
+			left: 0;
+		}
+		img.ants.right {
+			right: 0;
+		}
+		img.ants.bottom {
+			top: 480px;
+		}
+		p {
+			margin: 0;
+		}
+		p.hide {
+			display: none;
+		}
+		@media screen and (max-width: 359px) {
+			img.loser {
+				display: none;
+			}
+		}
+		@media screen and (max-width: 600px) {
+			video,
+			object,
+			embed {
+				width: 95%;
+				height: auto;
+				object-fit: cover;
+			}
+		}
+		@media screen and (min-width: 601px) {
+			video,
+			object,
+			embed {
+				height: 87vh;
+				width: auto;
+				object-fit: cover;
+			}
+		}
+		</style>
+	</head>
+	<body bgcolor="#000" link="#F00" vlink="#F00">
+		<div id="clickjack" onclick="youstilldoingthat();"></div>
+		<center>
+			<video width="600" height="480" controls muted autoplay loop playsinline>
+				<source src="hand-h264.mp4" type="video/mp4">
+				<source src="hand.ogg" type="video/ogg">
+				<source src="hand.webm" type="video/webm">
+				<source src="hand-simple.mp4" type="video/mp4">
+				<object data="hand.swf" width="600" height="480">
+					<embed src="hand.swf" width="600" height="480">
+					<p><a href="hand-simple.mp4">YOU STILL DOING THAT HAND THING ?</a></p>
+				</object>
+			</video>
+			<p><a href="http://web.archive.org/web/20170901151201if_/http://shayesaintjohn.net/"><span><b>SAVE ABUSED DOLLS!!</b></span><br><img class="doll" src="Rag_doll_runs.gif"><img class="doll" src="Rag_doll_runs.gif"><img class="doll" src="Rag_doll_runs.gif"><img class="doll" src="Rag_doll_runs.gif"><img class="doll loser" src="Rag_doll_runs.gif"></a></p>
+		</center>
+		<img class="ants left" src="Ants_go_up.gif">
+		<br>
+		<img class="ants left bottom" src="Ants_go_up.gif">
+		<br>
+		<img class="ants right" src="Ants_go_up.gif">
+		<br>
+		<img class="ants right bottom" src="Ants_go_up.gif">
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<p class="hide">SEND KAH TO <a href="http://pnppl.cc/">PNPPL.CC</a></p>
+	</body>
+</html>
