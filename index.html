@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html onload="handthing();" onclick="youstilldoingthat();">
+<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="referrer" content="no-referrer">
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
-		<link rel="icon" href="favicon-16.gif" type="image/gif" sizes="16x16">
+		<!-- static: -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" sizes="16x16 48x48">
+		<!-- anim: doubled, original, cropped -->
+		<link rel="icon" href="favicon-48.gif" type="image/gif" sizes="48x48">
 		<link rel="icon" href="favicon.gif" type="image/gif" sizes="24x24">
+		<link rel="icon" href="favicon-16.gif" type="image/gif" sizes="16x16">
 		<title>HAND THING</title>
-		<script>
+		<script><!--
 		function handthing() {
 			document.querySelector('video').muted = false;
 			document.querySelector('video').play();
 		}
 		function youstilldoingthat() {
 			handthing();
-			document.querySelector('#clickjack').style.display = "none";
+			document.querySelector('body').removeAttribute('onclick');
 		}
-		</script>
-		<style>
+		//--></script>
+		<style><!--
 		body,
 		html {
 			padding: 0;
@@ -29,12 +32,7 @@
 			background-image: url("hand.gif");
 			image-rendering: crisp-edges;
 			image-rendering: pixelated;
-		}
-		#clickjack {
-			height: 100vh;
-			width: 100%;
-			position: absolute;
-			z-index: 10;
+			font-family: serif;
 		}
 		video,
 		object,
@@ -42,9 +40,9 @@
 			padding-top: 1em;
 		}
 		a {
-			font-family: serif;
 			font-size: 2em;
 			color: red;
+			display: inline-block;
 		}
 		span {
 			display: block;
@@ -101,12 +99,26 @@
 				object-fit: cover;
 			}
 		}
-		</style>
+		@media (prefers-reduced-motion: reduce) {
+			body,
+			html {
+				background-image: url("hand-static.gif");
+			}
+			img.ants {
+				content: url("Ants_go_up-static.gif");
+			}
+			img.doll {
+				content: url("Rag_doll_runs-static.gif");
+			}
+			img.hands {
+				content: url("favicon-static.gif");
+			}
+		}
+		--></style>
 	</head>
-	<body bgcolor="#000" link="#F00" vlink="#F00">
-		<div id="clickjack" onclick="youstilldoingthat();"></div>
+	<body bgcolor="#000" link="#F00" vlink="#F00" background="hand.gif"  onload="handthing();" onclick="youstilldoingthat();">
 		<center>
-			<video width="600" height="480" controls muted autoplay loop playsinline>
+			<video width="600" height="480" controls autoplay loop playsinline>
 				<source src="hand-h264.mp4" type="video/mp4">
 				<source src="hand.ogg" type="video/ogg">
 				<source src="hand.webm" type="video/webm">
@@ -116,20 +128,19 @@
 					<p><a href="hand-simple.mp4">YOU STILL DOING THAT HAND THING ?</a></p>
 				</object>
 			</video>
-			<p><a href="//web.archive.org/web/20170901151201if_/http://shayesaintjohn.net/" target="_blank"><span><b>SAVE ABUSED DOLLS!!</b></span><br><img class="doll" src="Rag_doll_runs.gif" width="72" height="96"><img class="doll" src="Rag_doll_runs.gif" width="72" height="96"><img class="doll" src="Rag_doll_runs.gif" width="72" height="96"><img class="doll" src="Rag_doll_runs.gif" width="72" height="96"><img class="doll loser" src="Rag_doll_runs.gif" width="72" height="96"></a></p>
+			<p><a href="//web.archive.org/web/20170901151201if_/http://shayesaintjohn.net/" target="_blank"><span><b>SAVE ABUSED DOLLS!!</b></span><br><img class="doll" src="Rag_doll_runs.gif" width="72" height="96" alt="rag doll runs"><img class="doll" src="Rag_doll_runs.gif" width="72" height="96" alt="rag doll runs"><img class="doll" src="Rag_doll_runs.gif" width="72" height="96" alt="rag doll runs"><img class="doll" src="Rag_doll_runs.gif" width="72" height="96" alt="rag doll runs"><img class="doll loser" src="Rag_doll_runs.gif" width="72" height="96" alt="rag doll runs"></a></p>
 		</center>
-		<img class="ants left" src="Ants_go_up.gif" width="16" height="480">
+		<img class="ants left" src="Ants_go_up.gif" width="16" height="480" alt="ants go up">
 		<br>
-		<img class="ants left bottom" src="Ants_go_up.gif" width="16" height="480">
+		<img class="ants left bottom" src="Ants_go_up.gif" width="16" height="480" alt="ants go up">
 		<br>
-		<img class="ants right" src="Ants_go_up.gif" width="16" height="480">
+		<img class="ants right" src="Ants_go_up.gif" width="16" height="480" alt="ants go up">
 		<br>
-		<img class="ants right bottom" src="Ants_go_up.gif" width="16" height="480">
+		<img class="ants right bottom" src="Ants_go_up.gif" width="16" height="480" alt="ants go up">
 		<br>
-		<img class="hands left" src="favicon.gif" width="96" height="96">
+		<img class="hands left" src="favicon.gif" width="96" height="96" alt="that hand thing">
 		<br>
-		<img class="hands right" src="favicon.gif" width="96" height="96">
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<img class="hands right" src="favicon.gif" width="96" height="96" alt="that hand thing">
 		<p class="hide">SEND KAH TO <a href="//pnppl.cc/">PNPPL.CC</a></p>
 	</body>
 </html>
