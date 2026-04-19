@@ -13,12 +13,16 @@
 		<title>HAND THING</title>
 		<script><!--
 		function handthing() {
-			document.querySelector('video').muted = false;
-			document.querySelector('video').play();
+			if (document.querySelector) {
+				document.querySelector('video').muted = false;
+				document.querySelector('video').play();
+			}
 		}
 		function youstilldoingthat() {
-			handthing();
-			document.querySelector('body').removeAttribute('onclick');
+			if (document.querySelector) {
+				handthing();
+				document.querySelector('body').removeAttribute('onclick');
+			}
 		}
 		//--></script>
 		<style><!--
