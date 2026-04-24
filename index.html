@@ -117,6 +117,27 @@
 			img.hands {
 				content: url("favicon-static.gif");
 			}
+			.motion {
+				display: inline;
+				position: absolute;
+				top: 0;
+				left: 16px;
+			}
+			:root:has(.motion input:not(:checked)) {
+				body,
+				html {
+					background-image: url("hand.gif");
+				}
+				div.ants {
+					background-image: url("Ants_go_up.gif");
+				}
+				img.doll {
+					content: url("Rag_doll_runs.gif");
+				}
+				img.hands {
+					content: url("favicon.gif");
+				}
+			}
 		}
 		--></style>
 	</head>
@@ -146,6 +167,10 @@
 			<br>
 			<img class="hands left" src="favicon.gif" width="96" height="96" alt="that hand thing">
 			<img class="hands right" src="favicon.gif" width="96" height="96" alt="that hand thing">
+			<p class="hide motion">
+				<input type="checkbox" id="motion" checked>
+				<label for="motion">Reduce motion?</label>
+			</p>
 			<p class="hide">
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
