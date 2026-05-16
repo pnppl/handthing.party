@@ -13,15 +13,15 @@
 		<title>HAND THING</title>
 		<script><!--
 		function handthing() {
-			if (document.querySelector) {
-				document.querySelector('video').muted = false;
-				document.querySelector('video').play();
+			if (document.getElementById) {
+				document.getElementById('vid').muted = false;
+				document.getElementById('vid').play();
 			}
 		}
 		function youstilldoingthat() {
-			if (document.querySelector) {
+			if (document.getElementById) {
 				handthing();
-				document.querySelector('body').removeAttribute('onclick');
+				document.getElementById('bod').removeAttribute('onclick');
 			}
 		}
 		//--></script>
@@ -141,9 +141,9 @@
 		}
 		--></style>
 	</head>
-	<body bgcolor="#000" link="#F00" vlink="#F00" background="hand-small.gif"  onload="handthing();" onclick="youstilldoingthat();">
+	<body id="bod" bgcolor="#000" link="#F00" vlink="#F00" background="hand-small.gif"  onload="handthing();" onclick="youstilldoingthat();">
 		<center>
-			<video width="600" height="480" controls autoplay loop playsinline>
+			<video id="vid" width="600" height="480" controls autoplay loop playsinline>
 				<source src="hand-h264.mp4" type="video/mp4">
 				<source src="hand.ogg" type="video/ogg">
 				<source src="hand.webm" type="video/webm">
