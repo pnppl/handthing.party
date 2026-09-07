@@ -11,20 +11,6 @@
 		<link rel="icon" href="favicon.gif" type="image/gif" sizes="24x24">
 		<link rel="icon" href="favicon-16.gif" type="image/gif" sizes="16x16">
 		<title>HAND THING</title>
-		<script><!--
-		function handthing() {
-			if (document.getElementById) {
-				document.getElementById('vid').muted = false;
-				document.getElementById('vid').play();
-			}
-		}
-		function youstilldoingthat() {
-			if (document.getElementById) {
-				handthing();
-				document.getElementById('bod').removeAttribute('onclick');
-			}
-		}
-		//--></script>
 		<style><!--
 		body,
 		html {
@@ -141,7 +127,7 @@
 		}
 		--></style>
 	</head>
-	<body id="bod" bgcolor="#000" link="#F00" vlink="#F00" background="hand-small.gif"  onload="handthing();" onclick="youstilldoingthat();">
+	<body id="bod" bgcolor="#000" link="#F00" vlink="#F00" background="hand-small.gif">
 		<center>
 			<video id="vid" width="600" height="480" controls autoplay loop playsinline>
 				<source src="hand-h264.mp4" type="video/mp4">
